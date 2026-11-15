@@ -32,10 +32,12 @@ body {
 
 /* 4. Centrerar innehållet och gör raderna lagom breda */
 .container {
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
+
+
 
 /* 5. Sidhuvud */
 #site-header {
@@ -48,10 +50,10 @@ body {
 /* Smal header-bild över hela sidans bredd */
 #header-image {
   width: 100%;
-  max-width: none;  /* Tar bort standardbegränsningen på bildens bredd */
-  height: 160px;          /* Gör bilden smal. Ändra till t.ex. 120px eller 200px vid behov */
+  max-width: none;  /* Tar bort standardbegränsningen på bredden */
+  height: 240px;          /* Gör bilden smal. */
   object-fit: cover;      /* Beskär bilden så den inte ser ihoptryckt ut */
-  object-position: center;/* Fokuserar på mitten av bilden (kan ändras till top eller bottom) */
+  object-position: center;/* Fokuserar på mitten av bilden */
   display: block;
 }
 
