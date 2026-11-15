@@ -1,14 +1,22 @@
-/* Grundinställningar för hela sidan */
+/* =========================================================
+   1. GRUNDINSTÄLLNINGAR (MOBILE FIRST - Gäller för mobil)
+   ========================================================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;        /* Luftigt radavstånd för enkel läsning */
-  color: #111111;          /* Mörk text med hög kontrast */
+  font-size: 16px;           /* Mobilanpassad grundstorlek */
+  line-height: 1.6;          /* Luftigt radavstånd för enkel läsning */
+  color: #111111;            /* Mörk text med hög kontrast */
   background-color: #f4f6f8;
 }
 
-/* 2. gör en hoppa-länk för tangentbordsanvändare */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2. Hoppa-länk för tangentbordsanvändare */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -21,7 +29,7 @@ body {
 }
 
 .skip-link:focus {
-  top: 10px; /* Visas när man trycker på Tab-tangenten */
+  top: 10px;                 /* Visas när man trycker på Tab-tangenten */
 }
 
 /* 3. Tydlig fokusram när man navigerar med tangentbord */
@@ -30,53 +38,56 @@ body {
   outline-offset: 2px;
 }
 
-/* 4. Centrerar innehållet och gör raderna lagom breda */
+/* 4. Centrerar innehållet */
 .container {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
-
-
-/* 5. Sidhuvud */
+/* 5. Sidhuvud och header-bild */
 #site-header {
   background-color: #004494;
   color: #ffffff;
   padding-top: 15px;
-  padding-bottom: 10px;
-}
-
-/* Smal header-bild över hela sidans bredd */
-#header-image {
-  width: 100%;
-  max-width: none;  /* Tar bort standardbegränsningen på bredden */
-  height: 240px;          /* Gör bilden smal. */
-  object-fit: cover;      /* Beskär bilden så den inte ser ihoptryckt ut */
-  object-position: center;/* Fokuserar på mitten av bilden */
-  display: block;
+  padding-bottom: 0;
 }
 
 #university-name {
-  margin: 0;
+  margin: 0 0 15px 0;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* 6. Huvudinnehåll och rubriker */
+#header-image {
+  width: 100%;
+  max-width: none;           /* Fyller hela skärmens bredd */
+  height: 160px;             /* Smal höjd anpassad för mobil */
+  object-fit: cover;         /* Beskär bilden snyggt utan att trycka ihop den */
+  object-position: center;
+}
+
+/* 6. Huvudinnehåll och sidospalt i mobilvy (en kolumn) */
 #main-content {
   padding: 30px 0;
 }
 
+#layout-wrapper {
+  display: flex;
+  flex-direction: column;    /* Staplar text och bilder på höjden i mobilen */
+  gap: 30px;
+}
+
 #program-title {
-  font-size: 36px;
+  font-size: 28px;
   border-bottom: 3px solid #004494;
   padding-bottom: 10px;
+  margin-top: 0;
   margin-bottom: 25px;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -90,7 +101,23 @@ section {
   margin-bottom: 35px;
 }
 
-/* 7. Vita faktarutor */
+/* 7. Sidobilder (aside) i mobilvy */
+.sidebar-item {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 12px;
+  margin: 0 0 20px 0;
+}
+
+.sidebar-item figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: normal;
+  color: #333333;
+}
+
+/* 8. Vita faktarutor */
 .info-card {
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -103,7 +130,7 @@ section {
   margin-bottom: 0;
 }
 
-/* 8. Citat */
+/* 9. Citat */
 blockquote, #quote-alumna {
   background-color: #e6f0fa;
   border-left: 5px solid #004494;
@@ -119,13 +146,13 @@ blockquote, #quote-alumna {
   background: none;
 }
 
-figcaption {
+#quote-alumna figcaption {
   margin-top: 10px;
   font-style: normal;
   font-weight: bold;
 }
 
-/* 9. Sidfot */
+/* 10. Sidfot */
 #site-footer {
   background-color: #111111;
   color: #ffffff;
@@ -137,13 +164,80 @@ figcaption {
   margin: 0;
 }
 
-/* 10. Media queries responsiviteten */
-@media (max-width: 600px) {
+/* 11. MEDIA QUERIES */
+
+/* Surfplatta och uppåt (minst 601px bred skärm) */
+@media (min-width: 601px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 0 30px;
   }
 
   #program-title {
-    font-size: 28px;
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #header-image {
+    height: 260px;    /* Något högre header-bild på större skärmar */
+  }
+}
+
+/* Dator och breda skärmar (minst 950px bred skärm) */
+@media (min-width: 950px) {
+  .container {
+    max-width: 1600px;       /* Ger mer utrymme åt sidorna på breda skärmar */
+  }
+
+  #header-image {
+    height: 340px;
+  }
+
+  #layout-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* Huvudtexten placeras i mitten */
+  #program-webbutveckling {
+    flex: 2;
+    max-width: 680px;        /* Behåller optimal radlängd för läsbarhet (WCAG) */
+    order: 2;
+  }
+
+  /* Släpper igenom bilderna till flex-layouten */
+  #sidebar {
+    display: contents;
+  }
+
+  /* Säkerställer att själva bildfilen fyller hela sin ram */
+  .sidebar-item img {
+    width: 100%;
+    height: 260px;           /* ger bilderna en enhetlig, rejäl höjd */
+    object-fit: cover;       /* Beskär snyggt utan att dra ut bilden */
+  }
+
+  /* Första bilden placeras till vänster */
+  #sidebar .sidebar-item:first-child {
+    flex: 1.5;               /* Tar upp mer bredd än tidigare */
+    max-width: 380px;        
+    order: 1;
+    margin: 0;
+  }
+
+  /* Andra bilden placeras till höger */
+  #sidebar .sidebar-item:last-child {
+    flex: 1.5;               /* Tar upp mer bredd än tidigare */
+    max-width: 380px;       
+    order: 3;
+    margin: 0;
   }
 }
