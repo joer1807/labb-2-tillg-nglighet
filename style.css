@@ -293,17 +293,25 @@ blockquote, #quote-alumna {
     order: 2;
   }
 
-  /* Släpper igenom bild och citat direkt i trekolumnslayouten */
+  /* Släpper igenom vänsterkolumnen och högercitatet i trekolumnslayouten */
   #sidebar {
     display: contents;
   }
 
-  /* Bilden placeras till vänster (order: 1) */
-  .sidebar-item {
+  /* Vänsterspalten (bilden + Marie-citatet) placeras till vänster (order: 1) */
+  .left-column {
     flex: 1;
     max-width: 22rem;        /* ~352px */
     order: 1;
     margin: 0;
+    align-self: flex-start;  /* Krävs för att sticky ska fungera i flexbox */
+    position: sticky;        /* Följer med ner när man skrollar */
+    top: 2rem;
+  }
+
+  /* Skapar luft mellan bilden och Marie-citatet under */
+  .sidebar-item {
+    margin: 0 0 1.5rem 0;
   }
 
   .sidebar-item img {
@@ -312,12 +320,20 @@ blockquote, #quote-alumna {
     object-fit: cover;
   }
 
-  /* Citatet placeras till höger (order: 3) */
+  /* Tar bort onödig marginal runt Marie-citatet */
+  #quote-alumna {
+    margin: 0;
+  }
+
+  /* Branschcitatet placeras till höger (order: 3) */
   #quote-industry,
   .sidebar-quote {
     flex: 1;
     max-width: 22rem;        /* ~352px */
     order: 3;
     margin: 0;
+    align-self: flex-start;  /* Krävs för att sticky ska fungera i flexbox */
+    position: sticky;        /* Följer med ner när man skrollar */
+    top: 2rem;
   }
 }
