@@ -1,0 +1,147 @@
+/* Grundinställningar för hela sidan */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;        /* Luftigt radavstånd för enkel läsning */
+  color: #111111;          /* Mörk text med hög kontrast */
+  background-color: #f4f6f8;
+}
+
+/* 2. gör en hoppa-länk för tangentbordsanvändare */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background-color: #004494;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 10px; /* Visas när man trycker på Tab-tangenten */
+}
+
+/* 3. Tydlig fokusram när man navigerar med tangentbord */
+:focus {
+  outline: 3px solid #d97706;
+  outline-offset: 2px;
+}
+
+/* 4. Centrerar innehållet och gör raderna lagom breda */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 5. Sidhuvud */
+#site-header {
+  background-color: #004494;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+/* Smal header-bild över hela sidans bredd */
+#header-image {
+  width: 100%;
+  max-width: none;  /* Tar bort standardbegränsningen på bildens bredd */
+  height: 160px;          /* Gör bilden smal. Ändra till t.ex. 120px eller 200px vid behov */
+  object-fit: cover;      /* Beskär bilden så den inte ser ihoptryckt ut */
+  object-position: center;/* Fokuserar på mitten av bilden (kan ändras till top eller bottom) */
+  display: block;
+}
+
+#university-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 6. Huvudinnehåll och rubriker */
+#main-content {
+  padding: 30px 0;
+}
+
+#program-title {
+  font-size: 36px;
+  border-bottom: 3px solid #004494;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 35px;
+}
+
+/* 7. Vita faktarutor */
+.info-card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-left: 5px solid #004494;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* 8. Citat */
+blockquote, #quote-alumna {
+  background-color: #e6f0fa;
+  border-left: 5px solid #004494;
+  margin: 25px 0;
+  padding: 20px;
+  font-style: italic;
+}
+
+#quote-alumna blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* 9. Sidfot */
+#site-footer {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+#site-footer p {
+  margin: 0;
+}
+
+/* 10. Media queries responsiviteten */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  #program-title {
+    font-size: 28px;
+  }
+}
