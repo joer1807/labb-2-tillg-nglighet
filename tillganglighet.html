@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tillgänglighetsredogörelse - Mittuniversitetet</title>
+  
+  <!-- Google Fonts: Inter & Merriweather -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+
+  <header id="site-header">
+    <div class="container">
+      <p id="university-name">Mittuniversitetet</p>
+      <nav aria-label="Huvudmeny" class="main-nav">
+        <a href="index.html">← Tillbaka till Webbutveckling (120 hp)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div class="container single-column">
+
+      <article id="accessibility-statement">
+        <header>
+          <h1 id="program-title">Tillgänglighetsredogörelse</h1>
+          <p class="lead">Mittuniversitetet står bakom den här webbplatsen. Vi vill att så många som möjligt ska kunna använda den, och i det här dokumentet beskriver vi hur webbplatsen uppfyller kraven på digital tillgänglighet.</p>
+        </header>
+
+        <section aria-labelledby="heading-status">
+          <h2 id="heading-status">Hur tillgänglig är webbplatsen?</h2>
+          <p>Vi är medvetna om att delar av webbplatsen inte är helt tillgängliga. Se avsnittet om innehåll som inte är tillgängligt nedan för mer information.</p>
+          <p>Webbplatsen är utformad för att följa <strong>WCAG 2.1 nivå AA</strong> och har utformats med fokus på god läsbarhet, tydlig struktur och tangentbordsnavigering.</p>
+        </section>
+
+        <section aria-labelledby="heading-features">
+          <h2 id="heading-features">Åtgärder för ökad tillgänglighet</h2>
+          <p>Följande anpassningar har genomförts på webbplatsen för att underlätta för alla användare, inklusive personer som använder skärmläsare eller tangentbord:</p>
+
+          <ul class="tech-list">
+            <li><strong>Semantisk struktur och rubriker:</strong> Innehållet är uppbyggt med semantiska HTML5-element och en logisk rubrikhierarki för att underlätta navigering med hjälpmedel.</li>
+            <li><strong>Tangentbordsnavigering:</strong> Det finns en hoppa-länk högst upp på sidan för att gå direkt till huvudinnehållet, samt tydliga fokusramar vid navigering med Tab-tangenten.</li>
+            <li><strong>Kontraster och typografi:</strong> Färgvalen uppfyller kontrastkraven enligt WCAG. Texten använder dynamiska mått (rem) som skalar om användaren ändrar textstorleken i webbläsaren, samt en begränsad radlängd för god läsbarhet.</li>
+            <li><strong>Beskrivande alt-texter:</strong> Samtliga informativa bilder på webbplatsen är försedda med alternativa texter som beskriver bildens innehåll.</li>
+            <li><strong>Responsiv design:</strong> Webbplatsen anpassar sig efter olika skärmstorlekar utan att innehåll går förlorat eller kräver horisontell skrollning.</li>
+          </ul>
+        </section>
+
+        <section class="info-card" aria-labelledby="heading-contact">
+          <h2 id="heading-contact">Rapportera brister i webbplatsens tillgänglighet</h2>
+          <p>Vi strävar hela tiden efter att förbättra webbplatsens tillgänglighet. Om du upptäcker problem som inte är beskrivna på den här sidan, eller om du anser att vi inte uppfyller lagens krav, kan du meddela oss så att vi får veta att problemet finns.</p>
+          <p><strong>Kontakt:</strong> E-post <a href="mailto:tillganglighet@miun.se">tillganglighet@miun.se</a> eller telefon 010-142 80 00.</p>
+        </section>
+
+        <section aria-labelledby="heading-enforcement">
+          <h2 id="heading-enforcement">Tillsyn</h2>
+          <p>Myndigheten för digital förvaltning (Digg) har ansvaret för tillsyn över lagen om tillgänglighet till digital offentlig service. Om du inte är nöjd med hur vi hanterar dina synpunkter kan du <a href="https://digg.se" target="_blank" rel="noopener noreferrer">anmäla bristande tillgänglighet till Digg (öppnas i ny flik)</a>.</p>
+        </section>
+
+        <section aria-labelledby="heading-tech-info">
+          <h2 id="heading-tech-info">Teknisk information om webbplatsens tillgänglighet</h2>
+          <p>Den här webbplatsen är <strong>helt förenlig</strong> med lagen om tillgänglighet till digital offentlig service (WCAG 2.1 nivå AA).</p>
+          <p>Redogörelsen uppdaterades senast den 18 november 2026 efter egen granskning och validering av HTML och CSS.</p>
+        </section>
+
+      </article>
+
+    </div>
+  </main>
+
+  <footer id="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <p class="footer-title">Mittuniversitetet</p>
+        <p>Utbildning: Webbutveckling, 120 hp (Distans)</p>
+        <p>&copy; 2026 Mittuniversitetet</p>
+      </div>
+
+      <div class="tillganglighet">
+        <h2>Navigering</h2>
+        <p><a href="index.html">Tillbaka till startsidan</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
