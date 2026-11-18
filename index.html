@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webbutveckling - Mittuniversitetet</title>
   
-  <!-- Rättade länkar till Google Fonts: Inter & Merriweather -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- länkar till Google Fonts: Inter & Merriweather, dessa är specialanpassade för skärmläsare -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">      <!--preconnect gör att webbläsaren kan förbereda en anslutning till Google Fonts innan den faktiskt behöver hämta typsnittet, vilket kan förbättra laddningstiden.-->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
   
@@ -23,16 +23,16 @@
     <img src="images/header.jpg" alt="Studenter som samarbetar vid bärbara datorer" id="header-image">
   </header>
 
-  <main id="main-content" tabindex="-1">
-    <div id="layout-wrapper" class="container">
+  <main id="main-content" tabindex="-1">        <!--huvudinnehållet main startar här, som innehåller information om utbildningen. tab index-1 gör så man hoppar hit-->
+    <div id="layout-wrapper" class="container">  <!--en ny container som omsluter både artikeln och sidofältet, för att skapa en layout med två kolumner.-->
 
-      <article id="program-webbutveckling">
+      <article id="program-webbutveckling">   <!--semantisk artikel som omsluter hela innehållet om utbildningen.-->
         <header id="program-header">
-          <h1 id="program-title">Webbutveckling</h1>
+          <h1 id="program-title">Webbutveckling</h1>  <!--huvudrubrik för sidan-->
           <p class="lead">Webbutveckling är en het bransch som fortsätter att växa. Med Mittuniversitetets utbildning Webbutveckling i bagaget har du på bara två år lagt grunden för en framgångsrik framtid.</p>
-        </header>
+        </header>  <!--lead är en klass som gör texten lite större och fetare, för att den ska sticka ut mer.-->
 
-        <section id="section-intro" aria-labelledby="heading-about">
+        <section id="section-intro" aria-labelledby="heading-about">  <!--läses upp av skärmläsare, koppling till rubrik nedan-->
           <h2 id="heading-about">Om utbildningen</h2>
           <p>Utbildningen riktar sig till dig som har ett intresse för datorer och teknik. Efter studierna kan du arbeta med utveckling, administration och drift av moderna webbplatser. Utbildningen fokuserar på teoretiska och praktiska färdigheter och har stor tyngdpunkt på webbutveckling med moderna hjälpmedel och språk. På kort tid förbereds du för att arbeta med webbutveckling i ditt yrke. Utbildningen ges på distans.</p>
 
@@ -76,20 +76,20 @@
         </section>
       </article>
 
-      <aside id="sidebar" aria-label="Relaterat studiematerial">
-        <div class="left-column">
-          <figure class="sidebar-item">
-            <img id="aside-image-1" src="images/asideright.jpg" alt="Studenter som arbetar tillsammans med webbutveckling på en laptop">
+      <aside id="sidebar" aria-label="Relaterat studiematerial">  <!--aside är kompletterande sidomaterial, som inte är huvudfokus för sidan. aria-label gör att skärmläsare kan läsa upp rubriken för sidofältet.-->
+        <div class="left-column">  <!--huudcontainer för sidofältet, som gör att innehållet centreras och får en maxbredd.-->
+          <figure class="sidebar-item">  <!--semantisk behållaere för bilder och bildtext-->
+            <img id="aside-image-1" src="images/asideright.jpg" alt="Studenter som arbetar tillsammans med webbutveckling på en laptop">  <!--med alt-texten kan skärmläsare läsa upp vad bilden föreställer-->
             <figcaption>Samarbete och projektarbete i grupp ingår i flera av utbildningens kurser.</figcaption>
-          </figure>
+          </figure>  <!--figure contaniner omsluter både bilden och bildtexten, figcaption är själva bildtexten. helt fristående container/enhet det som ligger innuti-->
 
-          <figure id="quote-alumna">
+          <figure id="quote-alumna">    <!--semanstisk behållare för citat och bildtext och figuer anv om det finns en källa, kopplar ihop figure med blockquote-->
             <blockquote>
               <p>"Webbutveckling är den perfekta balansen mellan logik och kreativitet."</p>
             </blockquote>
-            <figcaption>— Marie Francesca Michl</figcaption>
+            <figcaption>— Marie Francesca Michl</figcaption> <!--talar om för skärmläsare att det är en bildtext, som hör ihop med citatet ovanför.-->
           </figure>
-        </div>
+        </div>  <!--stänger boxen för sidofältet-->
 
         <blockquote id="quote-industry" class="sidebar-quote">
           <p>"Branschen bedöms växa med 20 procent närmsta åren och behovet av webbutvecklare är stort."</p>
@@ -99,21 +99,21 @@
     </div>
   </main>
 
-  <footer id="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-info">
-        <p class="footer-title">Mittuniversitetet</p>
+  <footer id="site-footer">   <!--sista delen startar här, som innehåller information om universitetet och en länk till tillgänglighetsredogörelsen.-->
+    <div class="container footer-grid">  <!--staplar de två kolumnerna i sidfoten på mobilskärm, och gör att innehållet centreras och får en maxbredd.-->
+      <div class="footer-info">  <!--container för den vänstra kolumnen i sidfoten-->
+        <p class="footer-title">Mittuniversitetet</p>  <!--p tagg med en klass som gör texten lite större och fetare, för att den ska sticka ut mer.-->
         <p>Utbildning: Webbutveckling, 120 hp (Distans)</p>
         <p>&copy; 2026 Mittuniversitetet</p>
       </div>
 
-      <div class="tillganglighet">
+      <div class="tillganglighet">  <!--höger container i sidfoten, som innehåller information om tillgänglighetsredogörelsen.-->
         <h2>Tillgänglighet</h2>
-        <!-- Rättad: stängde p-taggen och gjorde länktexten tydligare -->
+    
         <p>Vi strävar efter att göra vår webbplats tillgänglig för alla. Läs vår <a href="tillganglighet.html">tillgänglighetsredogörelse</a>.</p>
         <figure class="footer-media">
-          <img id="footer-image" src="images/footer.jpg" alt="Kvinnlig student som studerar på campusområdet">
-        </figure>
+          <img id="footer-image" src="images/footer.jpg" alt="Kvinnlig student som studerar på campusområdet">  <!--sista bilden i sidfoten, med alt-text som gör att skärmläsare kan läsa upp vad bilden föreställer.-->
+        </figure>    <!--figure container omsluter både bilden och bildtexten, figcaption är själva bildtexten. helt fristående container/enhet det som ligger innuti-->
       </div>
     </div>
   </footer>

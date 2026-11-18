@@ -14,33 +14,33 @@
 </head>
 <body>
 
-  <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+  <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>      <!--den här gör så man kan hoppa över navigationen och gå direkt till huvudinnehållet. Bra för skärmläsare och tangentbordsanvändare.-->
 
-  <header id="site-header">
-    <div class="container">
-      <p id="university-name">Mittuniversitetet</p>
+  <header id="site-header">          <!--den här är för sidhuvudet, som innehåller universitetets namn och en länk tillbaka till webbutvecklingssidan.-->
+    <div class="container">     
+      <p id="university-name">Mittuniversitetet</p>        
       <nav aria-label="Huvudmeny" class="main-nav">
         <a href="index.html">← Tillbaka till Webbutveckling (120 hp)</a>
       </nav>
     </div>
   </header>
+ 
+  <main id="main-content" tabindex="-1">           <!--huvudinnehållet main startar här, som innehåller information om tillgänglighetsredogörelsen. tab index-1 gör så man hoppar hit-->
+    <div class="container single-column">        <!--den här är en container som gör att innehållet centreras och får en maxbredd. single-column gör så det blir en kolumn istället för två.-->
 
-  <main id="main-content" tabindex="-1">
-    <div class="container single-column">
-
-      <article id="accessibility-statement">
+      <article id="accessibility-statement">  <!--omsluter hela sidan om tillgänglighetsredogörelsen.-->
         <header>
-          <h1 id="program-title">Tillgänglighetsredogörelse</h1>
+          <h1 id="program-title">Tillgänglighetsredogörelse</h1>   <!--huvudrubrik för sidan-->
           <p class="lead">Mittuniversitetet står bakom den här webbplatsen. Vi vill att så många som möjligt ska kunna använda den, och i det här dokumentet beskriver vi hur webbplatsen uppfyller kraven på digital tillgänglighet.</p>
-        </header>
+        </header>    <!--lead är en klass som gör texten lite större och fetare, för att den ska sticka ut mer.--> 
 
-        <section aria-labelledby="heading-status">
-          <h2 id="heading-status">Hur tillgänglig är webbplatsen?</h2>
-          <p>Vi är medvetna om att delar av webbplatsen inte är helt tillgängliga. Se avsnittet om innehåll som inte är tillgängligt nedan för mer information.</p>
+        <section aria-labelledby="heading-status">   <!--ny section/temavsnitt som handlar om hur tillgänglig webbplatsen är. aria-labelledby gör så skärmläsare kan läsa upp rubriken för avsnittet.-->
+          <h2 id="heading-status">Hur tillgänglig är webbplatsen?</h2>  <!--koppling för skärmläsare-->
+          <p>Den här webbplatsen är helt förenlig med lagen om tillgänglighet.</p>
           <p>Webbplatsen är utformad för att följa <strong>WCAG 2.1 nivå AA</strong> och har utformats med fokus på god läsbarhet, tydlig struktur och tangentbordsnavigering.</p>
         </section>
 
-        <section aria-labelledby="heading-features">
+        <section aria-labelledby="heading-features">  <!--ny section igen med aria koppling för skärmläsare-->
           <h2 id="heading-features">Åtgärder för ökad tillgänglighet</h2>
           <p>Följande anpassningar har genomförts på webbplatsen för att underlätta för alla användare, inklusive personer som använder skärmläsare eller tangentbord:</p>
 
@@ -56,7 +56,7 @@
         <section class="info-card" aria-labelledby="heading-contact">
           <h2 id="heading-contact">Rapportera brister i webbplatsens tillgänglighet</h2>
           <p>Vi strävar hela tiden efter att förbättra webbplatsens tillgänglighet. Om du upptäcker problem som inte är beskrivna på den här sidan, eller om du anser att vi inte uppfyller lagens krav, kan du meddela oss så att vi får veta att problemet finns.</p>
-          <p><strong>Kontakt:</strong> E-post <a href="mailto:tillganglighet@miun.se">tillganglighet@miun.se</a> eller telefon 010-142 80 00.</p>
+          <p><strong>Kontakt:</strong> E-post <a href="mailto:tillganglighet@miun.se">tillganglighet@miun.se</a> eller telefon 012-345 67 89.</p>
         </section>
 
         <section aria-labelledby="heading-enforcement">
