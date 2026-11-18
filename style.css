@@ -2,7 +2,7 @@
    1. GRUNDINSTÄLLNINGAR (MOBILE FIRST - Gäller för mobil)
    ========================================================= */
 html {
-  font-size: 100%; /* 1rem = 16px, skalar dynamiskt */
+  font-size: 100%; /* 1rem = 16px,  */
 }
 
 body {
@@ -60,8 +60,9 @@ img {
 
 #university-name {
   margin: 0 0 1rem 0;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: bold;
+  font-family: 'Merriweather', Georgia, serif;
 }
 
 #header-image {
