@@ -1,94 +1,121 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tillgänglighetsredogörelse - Mittuniversitetet</title>
-  
-  <!-- Google Fonts: Inter & Merriweather skapar tydig kontrast och bra för skärmläsare -->
-  <link rel="preconnect" href="https://googleapis.com">  <!--preconnect gör att webbläsaren kan förbereda en anslutning till Google Fonts innan den faktiskt behöver hämta typsnittet, vilket kan förbättra laddningstiden.-->
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>  <!--gör så anslutningen är anonym, vilket kan förbättra prestanda och säkerhet.-->
-  <link href="https://googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tillgänglighetsredogörelse - Mittuniversitetet</title>
+
+    <!-- Google Fonts: Inter & Merriweather skapar tydig kontrast och bra för skärmläsare -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <!--preconnect gör att webbläsaren kan förbereda en anslutning till Google Fonts innan den faktiskt behöver hämta typsnittet, vilket kan förbättra laddningstiden.-->
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <!--gör så anslutningen är anonym, vilket kan förbättra prestanda och säkerhet.-->
+    <link
+        href="https://googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>      <!--den här gör så man kan hoppa över navigationen och gå direkt till huvudinnehållet. Bra för skärmläsare och tangentbordsanvändare.-->
+    <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+    <!--den här gör så man kan hoppa över navigationen och gå direkt till huvudinnehållet. Bra för skärmläsare och tangentbordsanvändare.-->
 
-  <header id="site-header">          <!--den här är för sidhuvudet, som innehåller universitetets namn och en länk tillbaka till webbutvecklingssidan.-->
-    <div class="container">     
-      <p id="university-name">Mittuniversitetet</p>        
-      <nav aria-label="Huvudmeny" class="main-nav">
-        <a href="index.html">← Tillbaka till Webbutveckling (120 hp)</a>
-      </nav>
-    </div>
-  </header>
- 
-  <main id="main-content" tabindex="-1">           <!--huvudinnehållet main startar här, som innehåller information om tillgänglighetsredogörelsen. tab index-1 gör så man hoppar hit-->
-    <div class="container single-column">        <!--den här är en container som gör att innehållet centreras och får en maxbredd. single-column gör så det blir en kolumn istället för två.-->
+    <header id="site-header">
+        <!--den här är för sidhuvudet, som innehåller universitetets namn och en länk tillbaka till webbutvecklingssidan.-->
+        <div class="container">
+            <p id="university-name">Mittuniversitetet</p>
+            <nav aria-label="Huvudmeny" class="main-nav">
+                <a href="index.html">← Tillbaka till Webbutveckling (120 hp)</a>
+            </nav>
+        </div>
+    </header>
 
-      <article id="accessibility-statement">  <!--omsluter hela sidan om tillgänglighetsredogörelsen.-->
-        <header>
-          <h1 id="program-title">Tillgänglighetsredogörelse</h1>   <!--huvudrubrik för sidan-->
-          <p class="lead">Mittuniversitetet strävar efter att alla ska kunna ta del av vårt innehåll. Här kan du läsa om hur vår webbplats lever upp till kraven för digital tillgänglighet.</p>
-        </header>    <!--lead är en klass som gör texten lite större och fetare, för att den ska sticka ut mer.--> 
+    <main id="main-content" tabindex="-1">
+        <!--huvudinnehållet main startar här, som innehåller information om tillgänglighetsredogörelsen. tab index-1 gör så man hoppar hit-->
+        <div class="container single-column">
+            <!--den här är en container som gör att innehållet centreras och får en maxbredd. single-column gör så det blir en kolumn istället för två.-->
 
-        <section aria-labelledby="heading-status">   <!--ny section/temavsnitt som handlar om hur tillgänglig webbplatsen är. aria-labelledby gör så skärmläsare kan läsa upp rubriken för avsnittet.-->
-          <h2 id="heading-status">Hur tillgänglig är webbplatsen?</h2>  <!--koppling för skärmläsare-->
-          <p>Den här webbplatsen är helt förenlig med lagen om tillgänglighet.</p>
-          <p>Webbplatsen är utformad för att följa <strong>WCAG 2.1 nivå AA</strong> och har utformats med fokus på god läsbarhet, tydlig struktur och tangentbordsnavigering.</p>
-        </section>
+            <article id="accessibility-statement"> <!--omsluter hela sidan om tillgänglighetsredogörelsen.-->
+                <header>
+                    <h1 id="program-title">Tillgänglighetsredogörelse</h1> <!--huvudrubrik för sidan-->
+                    <p class="lead">Mittuniversitetet strävar efter att alla ska kunna ta del av vårt innehåll. Här kan
+                        du läsa om hur vår webbplats lever upp till kraven för digital tillgänglighet.</p>
+                </header> <!--lead är en klass som gör texten lite större och fetare, för att den ska sticka ut mer.-->
 
-        <section aria-labelledby="heading-features">  <!--ny section igen med aria koppling för skärmläsare-->
-          <h2 id="heading-features">Åtgärder för ökad tillgänglighet</h2>
-          <p>Följande anpassningar har genomförts på webbplatsen för att underlätta för alla användare, inklusive personer som använder skärmläsare eller tangentbord:</p>
+                <section aria-labelledby="heading-status">
+                    <!--ny section/temavsnitt som handlar om hur tillgänglig webbplatsen är. aria-labelledby gör så skärmläsare kan läsa upp rubriken för avsnittet.-->
+                    <h2 id="heading-status">Hur tillgänglig är webbplatsen?</h2> <!--koppling för skärmläsare-->
+                    <p>Den här webbplatsen strävar efter att vara förenlig med lagen om tillgänglighet.</p>
+                    <p>Webbplatsen är utformad för att följa <strong>WCAG 2.1 nivå AA</strong> och har utformats med
+                        fokus på god läsbarhet, tydlig struktur och tangentbordsnavigering.</p>
+                </section>
 
-          <ul class="tech-list">
-            <li><strong>Semantisk struktur och rubriker:</strong> Innehållet är uppbyggt med semantiska HTML5-element och en logisk rubrikhierarki för att underlätta navigering med hjälpmedel.</li>
-            <li><strong>Tangentbordsnavigering:</strong> Det finns en hoppa-länk högst upp på sidan för att gå direkt till huvudinnehållet, samt tydliga fokusramar vid navigering med Tab-tangenten.</li>
-            <li><strong>Kontraster och typografi:</strong> Färgvalen uppfyller kontrastkraven enligt WCAG. Texten använder dynamiska mått (rem) som skalar om användaren ändrar textstorleken i webbläsaren, samt en begränsad radlängd för god läsbarhet.</li>
-            <li><strong>Beskrivande alt-texter:</strong> Samtliga informativa bilder på webbplatsen är försedda med alternativa texter som beskriver bildens innehåll.</li>
-            <li><strong>Responsiv design:</strong> Webbplatsen anpassar sig efter olika skärmstorlekar utan att innehåll går förlorat eller kräver horisontell skrollning.</li>
-          </ul>
-        </section>
+                <section aria-labelledby="heading-features"> <!--ny section igen med aria koppling för skärmläsare-->
+                    <h2 id="heading-features">Åtgärder för ökad tillgänglighet</h2>
+                    <p>Följande anpassningar har genomförts på webbplatsen för att underlätta för alla användare,
+                        inklusive personer som använder skärmläsare eller tangentbord:</p>
 
-        <section class="info-card" aria-labelledby="heading-contact">
-          <h2 id="heading-contact">Rapportera brister i webbplatsens tillgänglighet</h2>
-          <p>Vi strävar hela tiden efter att förbättra webbplatsens tillgänglighet. Om du upptäcker problem som inte är beskrivna på den här sidan, eller om du anser att vi inte uppfyller lagens krav, kan du meddela oss så att vi får veta att problemet finns.</p>
-          <p><strong>Kontakt:</strong> E-post <a href="mailto:tillganglighet@miun.se">tillganglighet@miun.se</a> eller telefon 012-345 67 89.</p>
-        </section>
+                    <ul class="tech-list">
+  <li><strong>Semantisk struktur och rubriker:</strong> Innehållet är uppbyggt med semantiska HTML5-element (som <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code> och <code>&lt;section&gt;</code>) samt en logisk rubrikhierarki för att underlätta navigering med skärmläsare och andra hjälpmedel.</li>
+  <li><strong>Tydliga etiketter och språkmarkeringar:</strong> Sektioner och sidofält är uppmärkta med ARIA-attribut (<code>aria-labelledby</code> och <code>aria-label</code>) för tydlig kontext. Sidans huvudspråk är angett som svenska (<code>lang="sv"</code>) och engelska termer är uppmärkta med <code>lang="en"</code> så att talsynteser uttalar orden rätt.</li>
+  <li><strong>Tangentbordsnavigering:</strong> Det finns en hoppa-länk högst upp på sidan för att gå direkt till huvudinnehållet, samt tydliga fokusramar vid navigering med Tab-tangenten.</li>
+  <li><strong>Kontraster och typografi:</strong> Färgvalen uppfyller kontrastkraven enligt WCAG. Vi använder lättlästa typsnitt utformade för skärmläsning – det tydliga sans-serif-typsnittet <strong>Inter</strong> för brödtext och det välproportionerliga serif-typsnittet <strong>Merriweather</strong> för utvalda delar som rubriker och citat. Texten använder dynamiska mått (<code>rem</code>) som skalar om användaren ändrar textstorleken i webbläsaren, samt en begränsad radlängd för god läsbarhet.</li>
+  <li><strong>Beskrivande alt-texter:</strong> Samtliga informativa bilder på webbplatsen är försedda med alternativa texter (<code>alt</code>) som beskriver bildens innehåll.</li>
+  <li><strong>Responsiv design:</strong> Webbplatsen anpassar sig efter olika skärmstorlekar utan att innehåll går förlorat eller kräver horisontell skrollning.</li>
+</ul>
+                </section>
 
-        <section aria-labelledby="heading-enforcement">
-          <h2 id="heading-enforcement">Tillsyn</h2>
-          <p>Myndigheten för digital förvaltning (Digg) har ansvaret för tillsyn över lagen om tillgänglighet till digital offentlig service. Här kan du läsa mera om detta <a href="https://digg.se" target="_blank" rel="noopener noreferrer"> Tillgänglighet på webben Digg (öppnas i ny flik)</a>.</p>
-        </section>
+                <section class="info-card" aria-labelledby="heading-contact">
+                    <h2 id="heading-contact">Rapportera brister i webbplatsens tillgänglighet</h2>
+                    <p>Vi strävar hela tiden efter att förbättra webbplatsens tillgänglighet. Om du upptäcker problem
+                        som inte är beskrivna på den här sidan, eller om du anser att vi inte uppfyller lagens krav, kan
+                        du meddela oss så att vi får veta att problemet finns.</p>
+                    <p><strong>Kontakt:</strong> E-post <a
+                            href="mailto:tillganglighet@miun.se">tillganglighet@miun.se</a> eller telefon 012-345 67 89.
+                    </p>
+                </section>
 
-        <section aria-labelledby="heading-tech-info">
-          <h2 id="heading-tech-info">Teknisk information om webbplatsens tillgänglighet</h2>
-          <p>Den här webbplatsen är <strong>helt förenlig</strong> med lagen om tillgänglighet till digital offentlig service (WCAG 2.1 nivå AA).</p>
-          <p>Redogörelsen uppdaterades senast den 18 november 2026 efter egen granskning och validering av HTML och CSS.</p>
-        </section>
+                <section aria-labelledby="heading-enforcement">
+                    <h2 id="heading-enforcement">Tillsyn</h2>
+                    <p>Myndigheten för digital förvaltning (Digg) har ansvaret för tillsyn över lagen om tillgänglighet
+                        till digital offentlig service. Här kan du läsa mera om detta <a href="https://digg.se"
+                            target="_blank" rel="noopener noreferrer"> Tillgänglighet på webben Digg (öppnas i ny
+                            flik)</a>.</p>
+                </section>
 
-      </article>
+                <section aria-labelledby="heading-tech-info">
+                    <h2 id="heading-tech-info">Teknisk information om webbplatsens tillgänglighet</h2>
+                    <p>Den här webbplatsen är <strong>helt förenlig</strong> med lagen om tillgänglighet till digital
+                        offentlig service (WCAG 2.1 nivå AA).</p>
+                    <p>Redogörelsen uppdaterades senast den 18 november 2026 efter egen granskning och validering av
+                        HTML och CSS.</p>
+                </section>
 
-    </div>
-  </main>
-/*använder samma css klasser som index.html, men med en extra klass single-column som gör att det blir en kolumn istället för två.*/
-  <footer id="site-footer">
-    <div class="container footer-grid">   /*container som gör att innehållet centreras och får en maxbredd. footer-grid gör så det blir två kolumner istället för en.*/
-      <div class="footer-info">
-        <p class="footer-title">Mittuniversitetet</p>
-        <p>Utbildning: Webbutveckling, 120 hp (Distans)</p>
-        <p>&copy; 2026 Mittuniversitetet</p>
-      </div>
+            </article>
 
-      <div class="tillganglighet">
-        <h2>Navigering</h2>
-        <p><a href="index.html">Tillbaka till startsidan</a></p>
-      </div>
-    </div>
-  </footer>
+        </div>
+    </main>
+    /*använder samma css klasser som index.html, men med en extra klass single-column som gör att det blir en kolumn
+    istället för två.*/
+    <footer id="site-footer">
+        <div class="container footer-grid"> /*container som gör att innehållet centreras och får en maxbredd.
+            footer-grid gör så det blir två kolumner istället för en.*/
+            <div class="footer-info">
+                <p class="footer-title">Mittuniversitetet</p>
+                <p>Utbildning: Webbutveckling, 120 hp (Distans)</p>
+                <p>&copy; 2026 Mittuniversitetet</p>
+            </div>
+
+            <div class="tillganglighet">
+                <h2>Navigering</h2>
+                <p><a href="index.html">Tillbaka till startsidan</a></p>
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>
